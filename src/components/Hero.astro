@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import { COMING_SOON } from '../config';
+import { sk } from '../i18n/sk';
+import detailScreenshot from '../assets/images/app-detail-klientky.png';
+import galleryScreenshot from '../assets/images/app-galeria-nechtov.png';
+
+const signUpUrl = 'https://app.galeida.com/sign-up';
+const headingId = 'hero-heading';
+---
+
+<section class="hero" aria-labelledby={headingId}>
+  <div class="container hero__wrap">
+  <div class="hero__blob" aria-hidden="true">
+    <svg viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M402 84c68 38 108 112 96 188-12 76-78 142-158 162-80 20-174-4-224-68-50-64-56-158-8-224 48-66 138-98 226-86 44 6 52 10 68 28Z"
+        fill="rgba(36, 27, 46, 0.04)"></path>
+    </svg>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__content">
+      <p class="hero__eyebrow">{sk.hero.eyebrow}</p>
+      <h1 class="hero__title" id={headingId}>{sk.hero.title}</h1>
+      <p class="hero__lead">{sk.hero.lead}</p>
+
+      <div class="hero__cta">
+        {
+          COMING_SOON ? (
+            <>
+              <span class="hero__cta-disabled" aria-disabled="true">{sk.hero.ctaTry}</span>
+              <p class="hero__cta-note">{sk.hero.ctaNote}</p>
+            </>
+          ) : (
+            <a class="hero__cta-active" href={signUpUrl}>{sk.hero.ctaTry}</a>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <Image
+        class="hero__shot hero__shot--back"
+        src={galleryScreenshot}
+        alt={sk.hero.galleryAlt}
+        width={359}
+        height={1024}
+        format="webp"
+        quality={85}
+        loading="lazy"
+        decoding="async"
+      />
+      <Image
+        class="hero__shot hero__shot--front"
+        src={detailScreenshot}
+        alt={sk.hero.detailAlt}
+        width={368}
+        height={1024}
+        format="webp"
+        quality={85}
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+  </div>
+</section>

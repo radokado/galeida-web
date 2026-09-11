@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import AnnouncementBar from '../components/AnnouncementBar.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { sk } from '../i18n/sk';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = sk.meta.defaultTitle, description = sk.meta.defaultDescription } = Astro.props;
+const pageTitle = title;
+---
+
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <AnnouncementBar />
+    <SiteHeader />
+    <slot />
+    <!-- Footer placeholder -->
+  </body>
+</html>

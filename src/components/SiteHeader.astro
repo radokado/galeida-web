@@ -1,0 +1,56 @@
+---
+import { sk } from '../i18n/sk';
+
+const appUrl = 'https://app.galeida.com';
+const homeUrl = '/sk/';
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href={homeUrl}>{sk.header.logo}</a>
+
+    <nav class="site-header__nav-desktop" aria-label="Hlavná navigácia">
+      <a class="site-header__nav-link" href="#funkcie">{sk.header.nav.features}</a>
+      <a class="site-header__nav-link" href="#pre-koho">{sk.header.nav.audience}</a>
+      <a class="site-header__nav-link" href="#o-galeide">{sk.header.nav.about}</a>
+      <a class="site-header__login" href={appUrl}>{sk.header.login}</a>
+    </nav>
+
+    <details class="site-header__mobile">
+      <summary class="site-header__menu-toggle" aria-label={sk.header.menuLabel}>
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M5 8H23"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+          <path
+            d="M5 14H23"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+          <path
+            d="M5 20H23"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+      </summary>
+      <div class="site-header__menu-panel">
+        <nav aria-label="Mobilná navigácia">
+          <a class="site-header__nav-link" href="#funkcie">{sk.header.nav.features}</a>
+          <a class="site-header__nav-link" href="#pre-koho">{sk.header.nav.audience}</a>
+          <a class="site-header__nav-link" href="#o-galeide">{sk.header.nav.about}</a>
+          <a class="site-header__login" href={appUrl}>{sk.header.login}</a>
+        </nav>
+      </div>
+    </details>
+  </div>
+</header>
