@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sk } from '../i18n/sk';
+---
+
+<BaseLayout title={sk.notFound.title}>
+  <section class="not-found" aria-labelledby="not-found-heading">
+    <div class="container not-found__inner">
+      <h1 class="not-found__title" id="not-found-heading">{sk.notFound.heading}</h1>
+      <p class="not-found__lead">{sk.notFound.lead}</p>
+      <a class="not-found__cta" href="/sk/">{sk.notFound.backHome}</a>
+    </div>
+  </section>
+</BaseLayout>

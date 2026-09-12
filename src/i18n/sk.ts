@@ -2,7 +2,20 @@ export const sk = {
   meta: {
     defaultTitle: 'Galeida — jednoduchší deň v salóne',
     defaultDescription:
-      'Galeida je aplikácia pre nechtové salóny. Klientky, návštevy a fotky na jednom mieste.',
+      'Aplikácia pre nechtové salóny. História návštev, poznámky a fotografie klientok vždy po ruke.',
+    ogSiteName: 'Galeida',
+    ogLocale: 'sk_SK',
+    ogImagePath: '/og-image.png',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: 'Galeida — aplikácia pre nechtové salóny',
+    twitterCard: 'summary_large_image',
+  },
+  notFound: {
+    title: 'Stránka sa nenašla — Galeida',
+    heading: 'Táto stránka neexistuje',
+    lead: 'Skúste sa vrátiť na úvodnú stránku.',
+    backHome: 'Späť na úvod',
   },
   announcement: {
     message:
