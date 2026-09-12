@@ -1,0 +1,22 @@
+---
+import { sk } from '../i18n/sk';
+
+const headingId = 'pre-koho';
+---
+
+<section class="verticals" aria-labelledby={headingId}>
+  <h2 class="verticals__title" id={headingId}>{sk.verticals.title}</h2>
+
+  <ul class="verticals__cards">
+    <li class="verticals__card verticals__card--manicure">
+      <!-- TODO: vertical icon -->
+      <span class="verticals__label">{sk.verticals.manicure}</span>
+    </li>
+    <li class="verticals__card verticals__card--pedicure">
+      <!-- TODO: vertical icon -->
+      <span class="verticals__label">{sk.verticals.pedicure}</span>
+    </li>
+  </ul>
+
+  <p class="verticals__note">{sk.verticals.note}</p>
+</section>

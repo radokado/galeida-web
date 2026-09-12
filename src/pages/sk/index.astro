@@ -1,8 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
+import Verticals from '../../components/Verticals.astro';
+import Features from '../../components/Features.astro';
 ---
 
 <BaseLayout>
   <Hero />
+  <div class="audience-features">
+    <div class="container audience-features__grid">
+      <Verticals />
+      <Features />
+    </div>
+  </div>
 </BaseLayout>

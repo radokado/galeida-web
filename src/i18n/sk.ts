@@ -28,4 +28,28 @@ export const sk = {
     detailAlt: 'Obrazovka detailu klientky v aplikácii Galeida',
     galleryAlt: 'Galéria fotografií nechtov v aplikácii Galeida',
   },
+  verticals: {
+    title: 'Pre koho je Galeida',
+    manicure: 'Manikúra',
+    pedicure: 'Pedikúra',
+    note: 'Ďalšie odbory pribúdajú.',
+  },
+  features: {
+    sectionTitle: 'Funkcie',
+    items: [
+      {
+        title: 'Pamätá si za vás',
+        description: 'História návštev, poznámky aj preferencie na jednom mieste.',
+      },
+      {
+        title: 'Fotky bez hľadania',
+        description: 'Galéria prác a fotografie z návštev prehľadne pri klientke.',
+      },
+      {
+        title: 'Pokračujte aj offline',
+        description:
+          'Pracujte aj bez internetu. Dáta sa bezpečne synchronizujú, keď ste online.',
+      },
+    ],
+  },
 } as const;
