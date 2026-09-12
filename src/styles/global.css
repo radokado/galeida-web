@@ -5,6 +5,7 @@
 
 :root {
   --brand: #db2777;
+  --brand-deep: #a8135a;
   --brand-ink: #72243e;
   --bg-page: #fbf7f2;
   --bg-soft-pink: #fbeaf0;
@@ -63,6 +64,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -79,11 +81,10 @@ html {
   }
 }
 
-html {
-  height: auto;
-}
-
 body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--line-normal);
@@ -91,6 +92,10 @@ body {
   background-color: var(--bg-page);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.site-main {
+  flex: 1 0 auto;
 }
 
 img,
@@ -702,4 +707,77 @@ p {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
+}
+
+/* Site footer */
+
+.site-footer {
+  flex-shrink: 0;
+  padding-block: var(--space-6);
+  background-color: var(--brand-deep);
+  color: #ffffff;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.site-footer__logo {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--line-tight);
+  color: #ffffff;
+}
+
+.site-footer__email,
+.site-footer__link {
+  font-size: 13px;
+  line-height: var(--line-normal);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer__email:hover,
+.site-footer__email:focus-visible,
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  text-decoration: underline;
+}
+
+.site-footer__email:focus-visible,
+.site-footer__link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.site-footer__billing-line {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.site-footer__billing-line + .site-footer__billing-line {
+  margin-top: 0;
+}
+
+@media (max-width: 719px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
 }

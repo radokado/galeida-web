@@ -1,0 +1,37 @@
+---
+import { sk } from '../i18n/sk';
+
+const { email, legal, billing, legalNavLabel, logo } = sk.footer;
+const mailtoHref = `mailto:${email}`;
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container site-footer__inner">
+    <div class="site-footer__col site-footer__col--brand">
+      <p class="site-footer__logo">{logo}</p>
+      <a class="site-footer__email" href={mailtoHref}>{email}</a>
+    </div>
+
+    <nav class="site-footer__col site-footer__col--legal" aria-label={legalNavLabel}>
+      <ul class="site-footer__links">
+        <li>
+          <a class="site-footer__link" href="/legal/terms.html">{legal.terms}</a>
+        </li>
+        <li>
+          <a class="site-footer__link" href="/legal/privacy.html">{legal.privacy}</a>
+        </li>
+        <li>
+          <a class="site-footer__link" href={mailtoHref}>{legal.contact}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__col site-footer__col--billing">
+      <p class="site-footer__billing-line">{billing.companyName}</p>
+      <p class="site-footer__billing-line">{billing.address}</p>
+      <p class="site-footer__billing-line">{billing.ico}</p>
+      <p class="site-footer__billing-line">{billing.dic}</p>
+      <p class="site-footer__billing-line">{billing.icDph}</p>
+    </div>
+  </div>
+</footer>

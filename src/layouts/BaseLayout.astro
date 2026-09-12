@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import AnnouncementBar from '../components/AnnouncementBar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { sk } from '../i18n/sk';
 
 interface Props {
@@ -27,7 +28,9 @@ const pageTitle = title;
   <body>
     <AnnouncementBar />
     <SiteHeader />
-    <slot />
-    <!-- Footer placeholder -->
+    <main class="site-main">
+      <slot />
+    </main>
+    <SiteFooter />
   </body>
 </html>

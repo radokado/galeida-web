@@ -73,4 +73,21 @@ export const sk = {
     title: 'Vznikla priamo zo života v salóne.',
     body: 'Galeida vznikla pri riešení každodenných potrieb malého nechtového salónu. Cieľom bolo mať históriu návštev, poznámky a fotografie klientok vždy po ruke — jednoducho aj medzi klientkami.',
   },
+  footer: {
+    logo: 'galeida',
+    email: 'ahoj@galeida.com',
+    legalNavLabel: 'Právne informácie a kontakt',
+    legal: {
+      terms: 'Podmienky používania',
+      privacy: 'Ochrana osobných údajov',
+      contact: 'Kontakt',
+    },
+    billing: {
+      companyName: 'Názov spoločnosti, s. r. o.',
+      address: 'Adresa: PSČ Mesto',
+      ico: 'IČO: [DOPLNIŤ]',
+      dic: 'DIČ: [DOPLNIŤ]',
+      icDph: 'IČ DPH: [DOPLNIŤ]',
+    },
+  },
 } as const;
