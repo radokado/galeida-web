@@ -1,0 +1,14 @@
+---
+import { sk } from '../i18n/sk';
+
+const headingId = 'story-heading';
+---
+
+<section class="story" aria-labelledby={headingId}>
+  <div class="container">
+    <div class="story__box" id="o-galeide">
+      <h2 class="story__title" id={headingId}>{sk.story.title}</h2>
+      <p class="story__body">{sk.story.body}</p>
+    </div>
+  </div>
+</section>

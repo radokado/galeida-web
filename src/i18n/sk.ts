@@ -52,4 +52,25 @@ export const sk = {
       },
     ],
   },
+  highlights: {
+    sectionTitle: 'Prečo Galeida',
+    items: [
+      {
+        title: 'Galeidu nainštalujete priamo z prehliadača',
+        description: 'Bez Google Play a bez obchodu s aplikáciami.',
+      },
+      {
+        title: 'Počas testovania bez poplatku',
+        description: 'O cenách po skončení testovania vás budeme informovať vopred.',
+      },
+      {
+        title: 'Dáta klientok chránime',
+        description: 'Prístup k nim majú iba oprávnené osoby salónu.',
+      },
+    ],
+  },
+  story: {
+    title: 'Vznikla priamo zo života v salóne.',
+    body: 'Galeida vznikla pri riešení každodenných potrieb malého nechtového salónu. Cieľom bolo mať históriu návštev, poznámky a fotografie klientok vždy po ruke — jednoducho aj medzi klientkami.',
+  },
 } as const;
